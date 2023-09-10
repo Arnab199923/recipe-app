@@ -24,7 +24,10 @@ nav h1{
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
+nav a{
+    text-decoration: none;
+    color: #000;
+}
 nav form{
     display: flex;
     justify-content: center;
