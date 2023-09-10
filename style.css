@@ -5,15 +5,15 @@
 }
 
 body{
-    background: rgb(118, 255, 175);
-    color:#fff;
+    background: #fff;
+    color:#000;
 }
 
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(3, 0, 51);
+    background: rgb(255, 255, 255);
     padding: 20px;
     z-index: 1;
 }
@@ -32,14 +32,18 @@ nav form{
 
 nav form input[type="text"]{
     flex-grow: 1;
-    margin-right: 10px;
+    margin-right: 10px;  
+    border:none;
+    outline: none;
 }
 nav form input[type="text"], button[type="submit"]{
-    border: none;
+    border:none;
+    outline: 1;
     border-radius: 5px;
     padding: 7px;
     font-size: 18px;
     text-transform: capitalize;
+    box-shadow: 3px 6px 11px black;
 }
 form button{
     width: 100px;
@@ -63,7 +67,8 @@ form button:hover{
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     /* grid-auto-flow: row; */
     gap: 40px;
-    width: 80%;
+    width:80%;
+    /* height: 10%; */
     margin:10px auto;
     padding: 20px;
 }
@@ -73,7 +78,23 @@ form button:hover{
     display: flex;
     flex-direction: column;
     color: #000;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 270px;
 }
+
+.recipe:hover{
+    border: 1px solid #e0e0e0;
+    transition: 120ms;
+    transform: scale(1.1);
+}
+
+.recipe h3{
+    font-size: 30px;
+}
+
 @media screen and (max-width:600px) {
     header nav{
         flex-direction: column;
